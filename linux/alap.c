@@ -26,7 +26,7 @@ const char* c_program =
     "   printf(\"Hello World!\\n\");\n"
     "\n"   
     "   return 0;\n"
-    "}";
+    "}\n";
 
 const char* python_program =
     "#!/usr/bin/env python3"
@@ -39,7 +39,7 @@ const char* python_program =
     "#####################################\n"
     "\n"
     "if __name__ == \"__main__\":\n"
-    "   main()";
+    "   main()\n";
 
 const char* java_program =
     "class Alap {\n"
@@ -57,12 +57,12 @@ const char* java_program =
     "   int x = make_double(10);\n"
     "   System.out.println(x);\n"
     "   }\n"
-    "}";
+    "}\n";
 
 const char* bash_program =
     "#!/bin/bash\n"
     "\n"
-    "echo \"Hello World!\"";
+    "echo \"Hello World!\"\n";
 
 int main(int argc, char* argv[])
 {
@@ -87,7 +87,7 @@ int main(int argc, char* argv[])
     //c program
     if(argc == 3 && !strcmp(argv[1], "c") && !strcmp(argv[2], "--stdout"))
     {
-        puts(c_program);
+        printf("%s",c_program);
     }
     else if(argc == 2 && !strcmp(argv[1], "c"))
     {
@@ -108,7 +108,7 @@ int main(int argc, char* argv[])
     //python program
     if(argc == 3 && !strcmp(argv[1], "py") && !strcmp(argv[2], "--stdout"))
     {
-        puts(python_program);
+        printf("%s",python_program);
     }
     else if(argc == 2 && !strcmp(argv[1], "py"))
     {
@@ -129,7 +129,7 @@ int main(int argc, char* argv[])
     //java program
     if(argc == 3 && !strcmp(argv[1], "java") && !strcmp(argv[2], "--stdout"))
     {
-        puts(java_program);
+        printf("%s",java_program);
     }
     else if(argc == 2 && !strcmp(argv[1], "java"))
     {
@@ -150,7 +150,7 @@ int main(int argc, char* argv[])
     //bash program
     if(argc == 3 && !strcmp(argv[1], "sh") && !strcmp(argv[2], "--stdout"))
     {
-        puts(bash_program);
+        printf("%s",bash_program);
     }
     else if(argc == 2 && !strcmp(argv[1], "sh"))
     {
